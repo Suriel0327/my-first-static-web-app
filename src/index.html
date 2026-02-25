@@ -5,13 +5,38 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
-  <title>Vanilla JavaScript App</title>
+  <title>Mi Sitio Estático</title>
 </head>
 
 <body>
-  <main>
+  <header>
+    <nav class="navbar container">
+      <div class="logo">Mi Web</div>
+      <ul class="nav-links">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Acerca</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+      <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+    </nav>
+  </header>
+
+  <main class="hero container">
     <h1>Hola Mundo</h1>
+    <p class="subtitle">Bienvenido a mi sitio estático con diseño atractivo y responsive.</p>
   </main>
+
+  <footer>
+    <p>&copy; 2026 Mi Web. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
 </body>
 
 </html>
